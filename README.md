@@ -1,3 +1,30 @@
+## Tutorial 2
+
+Pertanyaan 1: 
+http://localhost:8080/agensi/add?idAgensi=1&namaAgensi=Papa%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi
+
+Yang terjadi adalah adanya error Whitelabel yang memberitahukan bahwa tidak ada mapping. Hal tersebut terjadi karena belum ada template dimana thyleaf tidak dapat menangkap mapping yang ada, maka dari itu keluar notifikasi error Whitelabel.
+
+Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired tersebut dalam konteks service dan controller yang telah kamu buat
+
+Autowired menginjeksikan objek array dan koleksi java, seperti list, set, map, dan array diinjeksi menggunakan anotasi Autowired. Pada implementasi lab ini, Autowired digunakan untuk memudahkan kita dalam menggunakan constructor dan setter getter, Autowired memungkinkan Controller pada lab ini secara otomatis mencari service yang mengimplementasikan interface. Maka dari itu, kita tidak perlu membuat constructor dan setter getter karena Autowired sudah mengatasinya.
+
+Pertanyaan 3: http://localhost:8080/agensi/add?idAgensi=1&namaAgensi=Papa%20APAP&alamat=Maung%20Fasilkom Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi
+Terjadi error. Hal ini dikarenakan pada pembuatan agensi, diperlukan beberapa informasi seperti nama, id, alamat, dan nomor telepon. Sedangkan pada link yang tertera di soal ini, hanya ada nama, id, alamat agensi dan tidak ada nomor telepon. Maka dari itu, ada error karena penambahan data harus dilengkapi 4 aspek tersebut.
+
+Pertanyaan 4: Jika Papa APAP ingin melihat Travel Agensi dengan nama Papa APAP, link apa yang harus diakses?
+Link yang harus diakses adalah http://localhost:8080/agensi/view/id-agensi/1. Link ini akan mendirect ke View yang akan memperlihatkan informasi dari sebuah ID Agensi tertentu.
+
+Pertanyaan 5: Tambahkan 1 contoh Travel Agensi lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/agensi/viewAll , apa yang akan ditampilkan? Sertakan juga bukti screenshotmu.
+
+Disini saya menambahkan Papa APAP dengan ID 1, tampilan menjadi seperti ini:
+https://ibb.co/T2mZJzM
+
+Jika di View all, tampilan menjadi seperti ini:
+https://ibb.co/9mxbcyH
+
+
+
 ## Tutorial 1
 ### What I have learned today
 
