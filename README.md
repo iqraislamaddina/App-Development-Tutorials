@@ -1,3 +1,37 @@
+
+## Tutorial 3
+
+1. Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model (@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
+
+@AllArgsConstructor menghasilkan satu constructor dengan satu parameter pada tiap method yang ada di class. Sedangkan @Setter dan @Getter jika ditambahkan akan generate method setter dan getter untuk tiap metode dalam class, dan @NoArgsConstructor akan membuat constructor dengan isi kosong. @Entity akan menspesifikasikan sebuah class sebagai entitas, dan @Table akan menentukan table utama untuk sebuah entitas.
+https://www.baeldung.com/spring-injection-lombok
+https://www.baeldung.com/intro-to-project-lombok
+
+
+2. Pada class TravelAgensiDb, terdapat method findByNoAgensi, apakah kegunaan dari method tersebut?
+
+findByNoAgensi adalah sebuah method derived query yang digunakan untuk mencari agensi dari noAgensi, yang berasal dari spring Data JPA. Kata kuncinya adalah kata ‘By’ yang menandakan derived methodnya, yaitu find sebagai introduction dan NoAgensi sebagai spesifikasinya.
+https://www.baeldung.com/spring-data-derived-queries
+
+3. Jelaskan perbedaan kegunaan dari anotasi @JoinTable dan @JoinColumn
+
+@JoinTable akan menyimpan ID dari kedua entitas ke tabel yang terpisah, sedangkan @JoinColumn akan menyimpan ID ke entitas lain di kolom yang baru dalam table yang sama. @JoinColumn biasanya digunakan ketika entitas memiliki direct relationship, seperti foreign key yang berada antara dua entitas, sedangkan @JoinTable sering digunakan ketika ingin mengatur relationship antar entitas di table lain.
+https://javakeypoint.wordpress.com/2020/04/21/difference-between-joincolumn-and-jointable-in-hibernate/#:~:text=%40JoinTable%20stores%20the%20id%20of%20both%20the%20entity,manage%20the%20relationship%20between%20entities%20in%20another%20table.
+
+4. Pada class TourGuideModel, digunakan anotasi @JoinColumn pada atribut agensi, apa kegunaan dari name, referencedColumnName, dan nullable dalam anotasi tersebut? dan apa perbedaan nullable dan penggunaan anotasi @NotNull
+
+Kegunaan dari name adalah untuk memberikan nama dari foreign key pada kolom. referencedColumnName digunakan untuk memberikan nama pada kolom yang direferensikan oleh sebuah foreign key pada kolom. Nullable digunakan untuk mengetahui apakah foreign key pada kolom nullable atau tidak. Perbedaan dari nullable dan @NotNull adalah nullable membantu kita untuk mengidentifikasi apakah pemanggilan method atau variable dapat mengembalikan atau berisi null, sedangkan @NotNull adalah kode yang secara eksplisit mendeklarasikan bahwa metode tidak boleh mengembalikan null dan variable tidak dapat berisi null.
+https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html
+https://docs.oracle.com/javaee/6/api/javax/persistence/JoinColumn.html
+
+
+5. Jelaskan kegunaan FetchType.LAZY, CascadeType.ALL, dan FetchType.EAGER
+FetchType.LAZY memiliki kegunaan untuk memberikan informasi kepada Hibernate untuk mengambil entitas yang berkaitan saja dari database ketika kita sedang menggunakan relationship. FetchType.LAZY menjadi alternatif yang baik karena kita tidak perlu memilih entitas yang tidak kita butuhkan untuk uses case kita. CascadeTypeALL berisi operasi-operasi seperti PERSIST, MERGE, REMOVE, dll yang disebarkan ke entitas (parent) yang berasosiasi dengan entitas lainnya (child). FetchType.EAGER memiliki kegunaan untuk memberikan hibernate untuk mendapatkan seluruh elemen dari sebuah relationship ketika memilih sebuah entitas parent.
+https://thorben-janssen.com/entity-mappings-introduction-jpa-fetchtypes/
+https://www.baeldung.com/jpa-cascade-types
+
+
+
 ## Tutorial 2
 
 Pertanyaan 1: 
