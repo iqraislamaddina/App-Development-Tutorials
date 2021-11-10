@@ -1,3 +1,28 @@
+## Tutorial 5
+
+1. Apa itu Postman? Apa kegunaannya?
+Postman adalah sebuah platform API untuk membangun dan menggunakan API dengan menyederhanakan tiap tahapan lifecycle API dan mempersingkat collaboration sehingga API yang dibuat menjadi lebih cepat dan lebih baik. Postman digunakan untuk membuat sebuah test menjadi lebih singkat dan mudah, format JSON dapat dilihat dengan mudah, dan cukup klik Send untuk menguji test. Dengan user interface yang baik dan human-friendly, Postman menjadi alat yang efektif dalam membedah API yang dibuat oleh orang lain atau sekadar test yang saya buat.
+
+Selain itu, Postman juga sangat mudah untuk diakses dan dengan beragamnya fitur-fitur yang ada pada aplikasi tersebut, menggunakan Postman menjadi sangat efisien dan nyaman. Selain itu, Postman menyimpan hasil dari request dan response-response yang didapatkan, dan kita juga bisa menyimpan hasil proses yang dieksekusi.
+https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it
+https://dzone.com/articles/postman-for-api-testing-pros-cons-and-alternative
+ 
+2. Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty.
+@JsonIgnoreProperties dinotasikan di level class dan kita harus spesifikasi properti dari class tersebut untuk di-ignore atau dibiarkan. Anotasi ini akan membiarkan properti yang spesifik pada serialization dan deserialization JSON. Anotasi ini memiliki elemen seperti allowGetters, allowSetters, ignoreUnknown dan value. Contohnya pada tutorial yang kita kerjakan ini adalah value pada model Destinasi adalah list Travel Agensi.
+@JsonProperty digunakan untuk memetakan nama properti dengan keys dari JSON ketika serialization dan deserialization. Kita dapat menggunakan anotasi ini ketika deserialization ketika nama dari properti JSON dan nama field dari object tidak sesuai
+https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype#JsonIgnoreProperties
+https://dzone.com/articles/jackson-annotations-for-json-part-4-general.
+
+3. Apa kegunaan atribut WebClient?
+Web Client adalah interface yang merepresentasikan titik entri utama untuk melakukan web request dengan menyediakan API fungsional yang memanfaatkan Lambda dari Java 8. Secara default, Web Client menggunakan Reactor Netty sebagai library HTTP Client, namun library lain bisa dipasangkan melalui kustomisasi ClientHttpConnector. Dalam menggunakan WebClient dengan remote Rest APIs, awalnya kita perlu Spring WebFlux sebagai dependensi proyek.
+
+4. Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+ResponseEntity merepresentasikan HTTP response, meliputi header, body, dan status dalam spring rest API. ResponseEntity memungkinkan kita untuk menambahkan header dan status code juga. Response Entity digunakan ketika kita ingin mengubah header HTTP atau status code HTTP berdasarkan business logic atau request langsung. ResponseEntity tetap bisa dijalankan jika kita ingin mengembalikan sebuah object ataupun null. ResponseEntity menyediakan fleksibilitas untuk mengatur dan kustomisasi header HTTP.
+BindingResult adalah objek dari Spring yang menyimpan hasil dari validasi dan binding, dimana BindingResult mengandung error yang sudah terjadi. BindingResult harus muncul tepat setelah model object yang sudah divalidasi, atau Spring akan gagal memvalidasi objek dan mengeluarkan exception. BindingResult dapat digunakan sebagai argumen untuk memvalidasi sebuah method dari Validator dalam Controller.
+
+https://programmertoday.com/spring-responseentity-responsebody-resonsestatus/
+https://stackoverflow.com/questions/10413886/what-is-the-use-of-bindingresult-interface-in-spring-mvc/36715053#:~:text=%5B%20BindingResult%20%5D%20is%20Spring's%20object%20that,object%20and%20throw%20an%20exception. 
+
 ## Tutorial 4
 
 1. Jelaskan perbedaan th:include dan th:replace!
