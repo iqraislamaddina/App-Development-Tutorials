@@ -7,6 +7,10 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -17,6 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "destinasi")
 
+@JsonIgnoreProperties(value = {"listTravelAgensi"},allowSetters = true)
 public class DestinasiModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +37,6 @@ public class DestinasiModel implements Serializable {
 
     //Relasi dengan AgensiModel
     @ManyToMany(mappedBy = "listDestinasi")
+    @JsonBackReference
     List<TravelAgensiModel> listTravelAgensi;
 }

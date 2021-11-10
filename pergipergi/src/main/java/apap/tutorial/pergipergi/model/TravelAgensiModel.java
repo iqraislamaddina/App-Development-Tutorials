@@ -7,6 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.List;
@@ -50,6 +53,7 @@ public class TravelAgensiModel implements Serializable {
 
     //Relasi dengan TourGuideModel
     @OneToMany(mappedBy = "agensi", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<TourGuideModel> listTourGuide;
 
     //Relasi dengan DestinasiModel
