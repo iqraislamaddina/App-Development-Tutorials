@@ -1,3 +1,22 @@
+## Tutorial 4
+
+1. Jelaskan perbedaan th:include dan th:replace!
+th:replace - Menggantikan tag host dengan frament content tertentu. th:replace akan menjadi subtitusi dari tag host melalui fragment yang telah dibuat.
+th:include — Similar to th:insert but it only inserts the contents of the specified fragment Mirip dengan th:insert, bedanya hanya th:include insert pada konten dari fragment tertentu.
+
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#difference-between-thinsert-and-threplace-and-thinclude
+
+3. Jelaskan apa fungsi dari th:object!
+th:object adalah ekspresi atau atribut pada Thymeleaf yang digunakan untuk melakukan selection pada sebuah object
+
+https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html
+
+4. Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?
+${...} : adalah sebuah variable expression atau OGNL expression
+*{...} : adalah sebuah selection expression. Sama seperti dollar, bedanya adalah dengan *, tempat di eksekusi, yaitu di sebelum object yang di select saja
+
+https://stackoverflow.com/questions/37728515/thymeleaf-the-difference-between-thfield-and-thfield/40028263
+
 
 ## Tutorial 3
 
