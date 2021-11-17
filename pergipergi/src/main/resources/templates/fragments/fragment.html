@@ -52,5 +52,14 @@
         </form>
     </div>
 </nav>
+
+<footer th:fragment="footer" class="justify-content-center justify-content-lg-between border-top p-4 border-bottom">
+    
+    <p><b>Anda berada di halaman: </b></p>
+    <p th:text="${#httpServletRequest.getRequestURI().toString.contains('/agensi/')?'View All Agensi':''}"></p>
+    <p th:text="${#httpServletRequest.getRequestURI().toString.contains('/destinasi/')?'View All Destinasi':''}"></p>
+    
+</footer>
+
 </body>
 </html>
