@@ -3,6 +3,7 @@ import apap.tutorial.pergipergi.model.DestinasiModel;
 import apap.tutorial.pergipergi.service.DestinasiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +37,8 @@ public class DestinasiController {
     public String viewAllDestinasi(
         Model model
     ){
+        String role = SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString();
+        model.addAttribute("role", role);
         model.addAttribute("listDestinasi", destinasiService.getListDestinasi());
         return "viewall-destinasi";
     }
