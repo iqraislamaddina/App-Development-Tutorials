@@ -1,3 +1,29 @@
+## Tutorial 7
+
+1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+
+Untuk soal pertama, saya membuat method baru dengan nama DeleteShopItem yang memiliki fungsi untuk menghapus item dalam cart. Dapat dilihat pada potongan kode diatas yang merupakan DeleteShopItem. Awalnya, saya menyimpan state dari item-item pada cart dalam variabel newItems. Kemudian, saya menyimpan item dalam cart dalam variabel targetInd dan mengecek apakah ada item dalam cart. Jika ada, maka akan dijalankan fungsi splice untuk menghapus item dari cart. Kemudian, saya melakukan update terhadap list item yang ada. Terakhir, saya melakukan set state agar isi cart berubah.
+https://ibb.co/NVpR1gw
+
+Untuk soal kedua, sama seperti soal sebelumnya saya menyimpan state dari item-item dan menyimpan item dalam cart pada variabel targetInd. Saya melakukan pengecekan jika targetInd memiliki nilai < 0, maka saya melakukan push item yang baru dalam cart dan kemudian update item yang ada.
+https://ibb.co/tXdZRSk
+
+Untuk soal ketiga, saya hanya menambahkan else jika balance tidak cukup, maka akan diberikan alert yang memberikan informasi notifikasi bahwa balance tidak cukup untuk membayar item yang dimasukkan pada cart.
+https://ibb.co/tXdZRSk
+
+2. Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+Dari yang saya pelajari, state digunakan untuk menyimpan data yang dibutuhkan oleh halaman pada controller-view, dan props digunakan untuk mengirim data dan event handler pada komponen childnya. Selain itu, props memiliki performa yang lebih baik dibanding state, hal ini karena state sebaiknya tidak di akses dari komponen child, sehingga lebih baik dikirim ke props.
+
+3. Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam
+React? sebutkan alasannya.
+Ya, karena menurut saya component sudah cukup familiar dengan apa yang saya pelajari dulu. Dalam menampilkan list dan item, component bekerja tidak jauh beda dengan array pada javascript. Saya dapat mengiterasi list dengan method map dan output tiap list item dalam elemen HTML. Kemudian, melakukan render item dalam list dapat mudah digunakan. 
+
+4. Apa perbedaan class component dan functional component?
+Class component perlu melakukan extend dari React, sedangkan functional component hanyalah fungsi javascript yang menerima props sebagai argumen dan akan return elemen react.  Class component harus memiliki method render sedangkan functional component tidak perlu. Class component dapat diketahui sebelumnya memiliki stateful components karena ada logic dan state yang diimplementasikan, sedangkan functional component diketahui sebagai stateless components karena hanya menerima data dan menampilkan data tersebut dalam bentuk tertentu.
+
+5. Dalam react, apakah perbedaan component dan element?
+Element dalam react adalah object yang mendeskripsikan bagian-bagian dari dokumen atau DOM yang direpresentasikan oleh component. Dengan component, element adalah objek yang dikembalikan oleh fungsi. Sedangkan component dalam react adalah template yang bisa berbentuk fungsi atau class dengan fungsi render yang bisa dilakukan berkali-kali. 
+
 ## Tutorial 6
 1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang  telah  anda  buat)  konsep  tersebut  diimplementasi? 
 Otentikasi adalah proses untuk melakukan validasi terhadap seseorang, sedangkan otorisasi adalah proses untuk melakukan validasi terhadap aplikasi, file, data spesifik yang dapat diakses oleh orang tersebut. Karena validasi dilakukan terhadap seseorang, maka otentikasi bekerja terhadap atribut-atribut yang dimiliki oleh orang tersebut seperti password dan informasi yang dimasukkan oleh orang tersebut dan orang tersebut juga bisa melihat perubahan yang ia lakukan, sedangkan otorisasi bekerja melalui pengaturan yang diimplementasikan dan dijaga oleh organisasi, sehingga perubahan tidak dapat dilihat oleh pengguna. Maka dari itu, otentikasi dilakukan terlebih dahulu sebelum otorisasi.
