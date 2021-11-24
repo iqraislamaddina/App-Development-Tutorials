@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+<title>View All User</title>
+<object th:include="fragments/fragment :: css" th:remove="tag"></object>
+<object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="container">
+    <br><br>
+    <h2 style="text-align: center">Daftar Seluruh User</h2>
+    <br><br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Id User</th>
+            <th>Nama User</th>
+            <th>Email User</th>
+            <th>Password User</th>
+            <th>Role</th>
+            
+            <th style="text-align: center;">Action</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="user, iterationStatus : ${listUser}">
+            <td th:text="${iterationStatus.count}"></td>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.nama}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:if="${user.role} == 1">Admin</td>
+            <td th:if="${user.role} == 2">User</td>
+            <td><a th:href="@{/user/delete/} + ${user.username}" class="btn btn-outline-danger">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <td><a th:href="@{/user/add/}" class="btn btn-success">Tambah</a></td>
+    
+    <br><br>
+    <a href="/" class="btn btn-primary">Home</a>
+</div>
+
+</body>
+</html>
