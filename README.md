@@ -1,3 +1,27 @@
+
+## Tutorial 8
+1. Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian
+melakukan langkah - langkah tersebut?
+Langkah yang saya lakukan untuk solve latihan no 1 adalah melakukan load data dengan this.loadData(), dan saya mengubah state dalam handleSubmitSistem menjadi kosong dengan this.setState({-: "", -: "", -: "", }) agar fieldnya kosong.
+
+2. Jelaskan fungsi dari async dan await!
+Dalam programming, async dan wait adalah fitur yang memungkinkan fungsi asinkronus menjadi terstruktur seperti fungsi sinkronus pada umumnya. Secara semantik, ini berkaitan dengan dengan konsep dari corountine dan sering diimplementasi dengan berbagai teknik, dan juga digunakan terutama untuk menyediakan kesempatan program untuk mengeksekusi kode lain sembari menunggu running asinkronus untuk selesai yang biasanya di representasikan bagi 'promises' atau struktur data yang mirip.
+
+3. Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle
+pada pertanyaan ini.
+Saya lupa mengscreenshot jawaban saya karena terlalu bersemangat.
+
+4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate,
+componentDidUpdate, componentWillReceiveProps, componentWillUnmount.
+Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja
+yang biasanya menggunakan lifecycle method tersebut”.
+
+- componentDidMount memungkinkan untuk mengeksekusi kode di react ketika komponen sudah diletakkan di DOM, yang dipanggil ketika fase Mounting dari life-cycle.
+- componentDidUpdate adalah lifecycle dalam react yang dipanggil setelah perubahan dalam props atau adanya perubahan state. Method ini menyediakan props dan state sebelumnya sebuah nilai, yang memungkinkan kita untuk membandingkan snapshot sebelum dan sekarang.
+- componentWillReceiveProps di invoke sebelum komponen mounted react menerima props baru yang dipanggil ketika fase update lifecycle react. Ini digunakan untuk mengupdate state dalam response untuk beberapa perubahan pada props.
+- componentWillUnmount digunakan untuk membersihkan seperti membuang event listeners dan membatalkan timer. 
+
+
 ## Tutorial 7
 
 1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
